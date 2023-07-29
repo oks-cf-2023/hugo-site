@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja">
+    {{partial "head" .}}
+    <body>
+        {{ partial "header" . }}
+        <div style="min-height: 90vh">
+            {{ block "main" . }}
+            <!-- define "main"の内容が表示される -->
+            {{ end }}
+        </div>
+        {{ partial "footer" . }}
+    </body>
+</html>

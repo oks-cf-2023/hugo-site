@@ -1,0 +1,18 @@
+ baseURL = 'http://localhost:1313/'
+ languageCode = 'ja'
+ languageName = 'Japanese'
+ defaultContentLanguage = 'ja'
+ hasCJKLanguage = true
+ title = 'くまちゃんのドーナッツ屋さん'
+ theme = 'kuma'
+ 
+ [params]
+   text_color = 'dark-gray'
+   background_color_class = 'bg-navy'
+   author = '大宮北高校3年1組'
+   favicon = '/images/profile.png'
+   site_logo = '/images/profile.png'
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"

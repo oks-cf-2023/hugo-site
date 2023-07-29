@@ -1,0 +1,36 @@
+{{ define "title" }} {{ .Title }} &ndash; {{ .Site.Title }} {{ end }} {{ define "main" }}
+<main>
+    <section
+        class="hero is-large"
+        style="background-image: url('{{ .Params.Featured_image }}');background-repeat: no-repeat;background-size:cover;background-position: 50%  0%;background-size:contain;"
+    >
+        <div class="hero-body">
+            <div class="container"></div>
+        </div>
+    </section>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="columns is-mobile">
+                <div class="column is-8">
+                    <p class="title">{{ .Params.Name }}</p>
+                    <p class="subtitle is-size-3 my-2">{{ .Params.Price }}</p>
+                </div>
+                <div class="column is-4">
+                    <div class="has-text-centered">
+                        <a class="button is-info is-outlined my-3 is-size-3 p-6 m-1" href=""><b>予約する</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="notification is-warning is-light mx-6">
+        <strong>アレルギー品目</strong>
+        <br />
+        <p>{{ .Params.Allergy }}</p>
+    </div>
+    <section class="m-4 mx-6 content">
+        <h2>商品紹介</h2>
+        {{- .Content -}}
+    </section>
+</main>
+{{ end }}

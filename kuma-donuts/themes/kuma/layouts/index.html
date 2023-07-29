@@ -1,0 +1,57 @@
+{{ define "title" }} {{ .Title }} &ndash; {{ .Site.Title }} {{ end }} {{ define "main" }}
+<main>
+    <!-- root直下の/content/post/内の記事を10個まで表示 -->
+    <!-- rangeはループ -->
+    <div class="hero is-large">
+        <div class="hero-body">
+            <div class="title">ここにタイトルを入力</div>
+            <div class="subtitle">2F 1-3で営業予定</div>
+        </div>
+        <div class="hero-foot">
+            <nav class="tabs is-boxed is-fullwidth">
+                <div class="container has-text-centered">
+                    <ul>
+                        <li><a href="#donuts">ドーナッツ</a></li>
+                        <li><a href="#drink">飲み物</a></li>
+                        <li><a href="#contact">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="hero" id="donuts">
+        <div class="hero-body">
+            <div class="title">ドーナツ</div>
+        </div>
+    </div>
+    <div class="tile is-ancestor m-3 is-flex-wrap-wrap" style="overflow-x: scroll">
+        <div class="tile">
+            {{ $donuts := index .Site.Taxonomies.categories (lower "donuts") }} {{ $drink := index .Site.Taxonomies.categories (lower "drink") }} {{ range $donuts }}
+
+            <!-- list.htmlを読み込む -->
+            {{ .Render "list"}} {{ end }}
+        </div>
+    </div>
+    <div class="hero" id="drink">
+        <div class="hero-body">
+            <div class="title">飲み物</div>
+        </div>
+    </div>
+
+    <div class="tile is-ancestor m-3 is-flex-wrap-wrap" style="overflow-x: scroll">
+        <div class="tile">
+            {{ range $drink }}
+            <!-- list.htmlを読み込む -->
+            {{ .Render "list"}} {{ end }}
+        </div>
+    </div>
+
+    <div class="box m-2" id="contact">
+        <div class="hero hero-body">
+            <div class="title">お問い合わせ</div>
+        </div>
+        <div class="">大宮北高校3年1組 webサイト運用担当</div>
+        <!--<div class="">xxx@oks.city-saitama.ed.jp</div>-->
+    </div>
+</main>
+{{ end }}
