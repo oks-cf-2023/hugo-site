@@ -2,10 +2,13 @@
 <main>
     <!-- root直下の/content/post/内の記事を10個まで表示 -->
     <!-- rangeはループ -->
-    <div class="hero is-large">
+    <div class="hero is-large is-info">
         <div class="hero-body">
-            <div class="title">くまちゃんのドーナッツやさん</div>
-            <div class="subtitle">かわいいくまさんとメイドさんがドーナッツを販売します<br /><c class="help">企画書より引用</c></div>
+            <div class="title">
+                <p class="subtitle">3-1文化祭企画</p>
+                くまちゃんのドーナッツやさん
+            </div>
+            <div class="subtitle">かわいいくまさんとメイドさんがドーナッツを販売します<br /><c class="help">*企画書より引用</c></div>
         </div>
         <div class="hero-foot">
             <nav class="tabs is-boxed is-fullwidth">
@@ -38,7 +41,7 @@
             {{ .Render "list"}} {{ end }}
         </div>
     </div>
-    <div class="hero is-info" id="drink">
+    <div class="hero" id="drink">
         <div class="hero-body">
             <div class="title">飲み物</div>
         </div>
