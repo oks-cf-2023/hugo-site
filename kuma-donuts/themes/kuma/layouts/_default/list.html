@@ -1,5 +1,34 @@
 <div class="tile is-parent">
-    <div class="card" style="min-width: 700px">
+    <div class="card is-hidden-desktop" style="min-width: 700px">
+        <div class="card-image">
+            <figure class="image is-4by3">
+                <img src="{{ .Params.Featured_image }}" alt="Placeholder image" />
+            </figure>
+        </div>
+        <div class="card-content">
+            <div class="hero">
+                <div class="hero-body">
+                    <p class="title is-4 is-size-1">{{ .Params.Name }}</p>
+                    <p class="subtitle is-6 is-size-3">{{ .Params.Price }}</p>
+                </div>
+            </div>
+
+            <div class="content p-1">
+                <p class="my-2">{{ .Params.Description }}</p>
+                <br />
+                <div class="notification is-warning is-light is-size-4">
+                    <strong>アレルギー品目</strong>
+                    <br />
+                    <br />
+                    <p>{{ .Params.Allergy }}</p>
+                </div>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a href="{{ .Permalink }}" class="card-footer-item button is-outlined is-info m-3">詳しく見る</a>
+        </footer>
+    </div>
+    <div class="card is-hidden-touch" style="min-width: 400px">
         <div class="card-image">
             <figure class="image is-4by3">
                 <img src="{{ .Params.Featured_image }}" alt="Placeholder image" />
@@ -18,6 +47,7 @@
                 <br />
                 <div class="notification is-warning is-light">
                     <strong>アレルギー品目</strong>
+                    <br />
                     <br />
                     <p>{{ .Params.Allergy }}</p>
                 </div>
