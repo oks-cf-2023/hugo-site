@@ -16,16 +16,24 @@
                     <ul>
                         <li><a href="#donuts" class="" style="font-size: 2vh">ドーナッツ</a></li>
                         <li><a href="#drink" class="" style="font-size: 2vh">飲み物</a></li>
-                        <li><a href="#contact" class="" style="font-size: 2vh">お問い合わせ</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </div>
     <div class="m-3 box" style="font-size: 2vh">
-        <strong>About US</strong>
         <br />
-        <p>第68回北高祭(校内公開:9/1 Fri、一般公開:9/2 Sat)の中で3年1組は「2F 1年3組教室」でドーナッツと飲み物の販売をします！</p>
+        <p class="my-2">販売日時:</p>
+        <br />
+        <p>9/2 (Fri)</p>
+        <br />
+        <p>9/2 (Sat)</p>
+        <br />
+        <p class="my-2">販売場所：</p>
+        <br />
+        <p>１年３組教室</p>
+        <br />
+        <br />
         <p>ご来場お待ちしています！</p>
     </div>
     <div class="hero" id="donuts">
@@ -52,15 +60,6 @@
             {{ range $drink }}
             <!-- list.htmlを読み込む -->
             {{ .Render "list"}} {{ end }}
-        </div>
-    </div>
-    <div class="my-4">
-        <div class="box m-2" id="contact">
-            <div class="hero hero-body">
-                <div class="title">お問い合わせ</div>
-            </div>
-            <div class="">第68回北高祭 3年1組 webサイト運用担当</div>
-            <!--<div class="">xxx@oks.city-saitama.ed.jp</div>-->
         </div>
     </div>
 </main>
