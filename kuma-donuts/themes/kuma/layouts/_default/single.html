@@ -23,14 +23,29 @@
             </div>
         </div>
     </section>
-    <div class="notification is-warning is-light mx-6">
-        <strong>アレルギー品目</strong>
-        <br />
-        <p>{{ .Params.Allergy }}</p>
+    <div class="is-hidden-desktop">
+        <div class="notification is-warning is-light mx-6 is-size-3">
+            <strong>アレルギー品目</strong>
+            <br />
+            <br />
+            <p>{{ .Params.Allergy }}</p>
+        </div>
+        <section class="m-4 mx-6 content is-size-5">
+            <h2>商品紹介</h2>
+            <div class="is-size-3">{{- .Content -}}</div>
+        </section>
     </div>
-    <section class="m-4 mx-6 content">
-        <h2>商品紹介</h2>
-        {{- .Content -}}
-    </section>
+    <div class="is-hidden-touch">
+        <div class="notification is-warning is-light mx-6 is-size-5">
+            <strong>アレルギー品目</strong>
+            <br />
+            <br />
+            <p>{{ .Params.Allergy }}</p>
+        </div>
+        <section class="m-4 mx-6 content">
+            <h2>商品紹介</h2>
+            <div class="is-size-5">{{- .Content -}}</div>
+        </section>
+    </div>
 </main>
 {{ end }}
