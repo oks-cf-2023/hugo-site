@@ -24,7 +24,7 @@
             <div class="title">ドーナツ</div>
         </div>
     </div>
-    <div class="tile is-ancestor m-3 is-flex-wrap-wrap" style="overflow-x: scroll">
+    <div class="tile is-ancestor m-3 is-flex-wrap-wrap" style="overflow-x: auto">
         <div class="tile">
             {{ $donuts := index .Site.Taxonomies.categories (lower "donuts") }} {{ $drink := index .Site.Taxonomies.categories (lower "drink") }} {{ range $donuts }}
 
@@ -38,20 +38,21 @@
         </div>
     </div>
 
-    <div class="tile is-ancestor m-3 is-flex-wrap-wrap" style="overflow-x: scroll">
+    <div class="tile is-ancestor m-3 is-flex-wrap-wrap" style="overflow-x: auto">
         <div class="tile">
             {{ range $drink }}
             <!-- list.htmlを読み込む -->
             {{ .Render "list"}} {{ end }}
         </div>
     </div>
-
-    <div class="box m-2" id="contact">
-        <div class="hero hero-body">
-            <div class="title">お問い合わせ</div>
+    <div class="my-4">
+        <div class="box m-2" id="contact">
+            <div class="hero hero-body">
+                <div class="title">お問い合わせ</div>
+            </div>
+            <div class="">大宮北高校3年1組 webサイト運用担当</div>
+            <!--<div class="">xxx@oks.city-saitama.ed.jp</div>-->
         </div>
-        <div class="">大宮北高校3年1組 webサイト運用担当</div>
-        <!--<div class="">xxx@oks.city-saitama.ed.jp</div>-->
     </div>
 </main>
 {{ end }}
