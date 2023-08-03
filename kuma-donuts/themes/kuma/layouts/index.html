@@ -2,23 +2,12 @@
 <main>
     <!-- root直下の/content/post/内の記事を10個まで表示 -->
     <!-- rangeはループ -->
-    <div class="hero is-large is-info">
+    <div class="hero is-large">
         <div class="hero-body">
-            <div class="title" style="font-size: 3vh">
-                <p class="subtitle my-2" style="font-size: 2vh">3-1文化祭企画</p>
-                くまちゃんのドーナッツやさん
-            </div>
-            <div class="subtitle my-2" style="font-size: 1.5vh">かわいいくまさんとメイドさんがドーナッツを販売します<br /><c class="help">*企画書より引用</c></div>
-        </div>
-        <div class="hero-foot">
-            <nav class="tabs is-boxed is-fullwidth">
-                <div class="container has-text-centered">
-                    <ul>
-                        <li><a href="#donuts" class="" style="font-size: 2vh">ドーナッツ</a></li>
-                        <li><a href="#drink" class="" style="font-size: 2vh">飲み物</a></li>
-                    </ul>
-                </div>
-            </nav>
+            <div class="bg">
+                <span class="mask-bg anim"><span class="inn">大宮北高校 3-1</span></span><br>
+                <span class="mask-bg anim"><span class="inn">くまちゃんのドーナッツ屋さん</span></span>
+              </div>
         </div>
     </div>
     <div class="m-3 box" style="font-size: 2vh">
@@ -41,23 +30,10 @@
             <div class="title">ドーナツ</div>
         </div>
     </div>
-    <div class="tile is-ancestor m-3 is-flex-wrap-wrap" style="overflow-x: auto">
+    <div class="tile is-ancestor m-3 is-flex-wrap-wrap is-vertical" style="overflow-x: auto">
         <div class="tile">
-            {{ $donuts := index .Site.Taxonomies.categories (lower "donuts") }} {{ $drink := index .Site.Taxonomies.categories (lower "drink") }} {{ range $donuts }}
+            {{ $donuts := index .Site.Taxonomies.categories (lower "donuts") }}{{ range $donuts }}
 
-            <!-- list.htmlを読み込む -->
-            {{ .Render "list"}} {{ end }}
-        </div>
-    </div>
-    <div class="hero" id="drink">
-        <div class="hero-body">
-            <div class="title">飲み物</div>
-        </div>
-    </div>
-
-    <div class="tile is-ancestor m-3 is-flex-wrap-wrap" style="overflow-x: auto">
-        <div class="tile">
-            {{ range $drink }}
             <!-- list.htmlを読み込む -->
             {{ .Render "list"}} {{ end }}
         </div>
