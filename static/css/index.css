@@ -113,13 +113,21 @@ hr.style5 {
   width: 100%;
   height: auto;
   opacity: 0;
-  animation: slideshow 24s linear infinite;
+  animation: slideshow 20s linear infinite;
 }
 
+/* nth-childは最初と最後以外の全部をちゃんとする */
+/* 始める秒数をちゃんと指定する、1枚の秒数×枚数を全体に指定する */
+/* animation-delayはちゃんとロジックを理解していじろう！ */
+
 .slide img:nth-child(2) {
-  animation-delay: 8s;
+  animation-delay: 5s;
+}
+
+.slide img:nth-child(3) {
+  animation-delay: 10s;
 }
 
 .slide img:last-child {
-  animation-delay: 16s;
+  animation-delay: 15s;
 }
